@@ -1,0 +1,6 @@
+2026-04-15 23:36:56 | INFO     | bot.orders                   | -            | ORDER_TYPE:MARKET | Placing MARKET order | symbol=BTCUSDT side=BUY qty=0.001
+2026-04-15 23:36:57 | INFO     | bot.orders                   | -            | ORDER_TYPE:MARKET | MARKET order placed | orderId=13037500448 status=NEW
+2026-04-16 00:13:15 | INFO     | bot.orders                   | -            | ORDER_TYPE:MARKET | Placing MARKET order | symbol=BTCUSDT side=BUY qty=0.001
+2026-04-16 00:13:15 | INFO     | bot.orders                   | -            | ORDER_TYPE:MARKET | MARKET order placed | orderId=13037549282 status=NEW
+2026-04-16 00:17:20 | INFO     | bot.orders                   | -            | ORDER_TYPE:MARKET | Placing MARKET order | symbol=BTCUSDT side=BUY qty=0.001
+2026-04-16 00:17:21 | INFO     | bot.orders                   | -            | ORDER_TYPE:MARKET | MARKET order placed | orderId=13037569460 status=NEW

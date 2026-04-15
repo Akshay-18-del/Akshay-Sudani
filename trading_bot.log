@@ -1,0 +1,416 @@
+2026-04-15 01:47:21 | DEBUG    | __main__ | Trading bot started | args=['--help']
+2026-04-15 01:47:27 | DEBUG    | __main__ | Trading bot started | args=['--symbol', 'BTCUSDT', '--side', 'BUY', '--type', 'LIMIT', '--quantity', '0.001']
+2026-04-15 01:47:27 | ERROR    | cli.parser | Input validation failed: --price is required for LIMIT orders. Example: --price 30000.50
+2026-04-15 01:47:27 | ERROR    | __main__ | Unhandled exception at top level: 'charmap' codec can't encode character '\u2718' in position 9: character maps to <undefined>
+Traceback (most recent call last):
+  File "F:\python developer\cli\parser.py", line 209, in run_cli
+    params = validate_order_params(
+        symbol=args.symbol,
+    ...<3 lines>...
+        price=args.price,
+    )
+  File "F:\python developer\utils\validator.py", line 261, in validate_order_params
+    price      = validate_price(price, order_type)
+  File "F:\python developer\utils\validator.py", line 206, in validate_price
+    raise ValueError(
+    ...<2 lines>...
+    )
+ValueError: --price is required for LIMIT orders. Example: --price 30000.50
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\python developer\main.py", line 24, in main
+    run_cli()
+    ~~~~~~~^^
+  File "F:\python developer\cli\parser.py", line 218, in run_cli
+    print(_c(f"\n  ✘  Validation Error: {exc}\n", _RED))
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python314\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2718' in position 9: character maps to <undefined>
+2026-04-15 01:48:08 | DEBUG    | __main__ | Trading bot started | args=['--symbol', 'BTCUSDT', '--side', 'BUY', '--type', 'LIMIT', '--quantity', '0.001']
+2026-04-15 01:48:08 | ERROR    | cli.parser | Input validation failed: --price is required for LIMIT orders. Example: --price 30000.50
+2026-04-15 01:48:14 | DEBUG    | __main__ | Trading bot started | args=['--symbol', 'BTCUSDT', '--side', 'BUY', '--type', 'MARKET', '--quantity', '0.001']
+2026-04-15 01:48:14 | ERROR    | cli.parser | Authentication error: BINANCE_TESTNET_API_KEY and BINANCE_TESTNET_API_SECRET environment variables must be set. Copy .env.example to .env and fill in your credentials.
+2026-04-15 01:59:11 | DEBUG    | __main__                     | -            | Trading bot starting | python=3.14.4 | argv=['--version']
+2026-04-15 01:59:11 | DEBUG    | __main__                     | -            | Trading bot exiting.
+2026-04-15 01:59:15 | DEBUG    | __main__                     | -            | Trading bot starting | python=3.14.4 | argv=['--help']
+2026-04-15 01:59:15 | DEBUG    | __main__                     | -            | Trading bot exiting.
+2026-04-15 01:59:20 | DEBUG    | __main__                     | -            | Trading bot starting | python=3.14.4 | argv=['order', '--help']
+2026-04-15 01:59:20 | DEBUG    | __main__                     | -            | Trading bot exiting.
+2026-04-15 01:59:25 | DEBUG    | __main__                     | -            | Trading bot starting | python=3.14.4 | argv=['order', '--symbol', 'BTCUSDT', '--side', 'BUY', '--type', 'MARKET', '--quantity', '0.001', '--dry-run']
+2026-04-15 01:59:25 | DEBUG    | cli.parser                   | -            | Command=order | args={'command': 'order', 'symbol': 'BTCUSDT', 'side': 'BUY', 'order_type': 'MARKET', 'quantity': 0.001, 'price': None, 'time_in_force': 'GTC', 'dry_run': True}
+2026-04-15 01:59:25 | INFO     | cli.parser                   | -            | Dry-run complete | params=BUY 0.001 BTCUSDT MARKET (market)
+2026-04-15 01:59:25 | DEBUG    | __main__                     | -            | Trading bot exiting.
+2026-04-15 01:59:30 | DEBUG    | __main__                     | -            | Trading bot starting | python=3.14.4 | argv=['order', '--symbol', 'BTCUSDT', '--side', 'BUY', '--type', 'LIMIT', '--quantity', '0.001']
+2026-04-15 01:59:30 | DEBUG    | cli.parser                   | -            | Command=order | args={'command': 'order', 'symbol': 'BTCUSDT', 'side': 'BUY', 'order_type': 'LIMIT', 'quantity': 0.001, 'price': None, 'time_in_force': 'GTC', 'dry_run': False}
+2026-04-15 01:59:30 | WARNING  | cli.parser                   | -            | Validation failed | field=price | reason=is required for LIMIT orders
+2026-04-15 01:59:30 | DEBUG    | __main__                     | -            | Trading bot exiting.
+2026-04-15 01:59:49 | DEBUG    | __main__                     | -            | Trading bot starting | python=3.14.4 | argv=['order', '--symbol', 'BTCUSDT', '--side', 'BUY', '--type', 'LIMIT', '--quantity', '0.001']
+2026-04-15 01:59:49 | DEBUG    | cli.parser                   | -            | Command=order | args={'command': 'order', 'symbol': 'BTCUSDT', 'side': 'BUY', 'order_type': 'LIMIT', 'quantity': 0.001, 'price': None, 'time_in_force': 'GTC', 'dry_run': False}
+2026-04-15 01:59:49 | WARNING  | cli.parser                   | -            | Validation failed | field=price | reason=is required for LIMIT orders
+2026-04-15 01:59:49 | DEBUG    | __main__                     | -            | Trading bot exiting.
+2026-04-15 01:59:49 | DEBUG    | __main__                     | -            | Trading bot starting | python=3.14.4 | argv=['order', '--symbol', '123INVALID', '--side', 'BUY', '--type', 'MARKET', '--quantity', '0.001', '--dry-run']
+2026-04-15 01:59:49 | DEBUG    | cli.parser                   | -            | Command=order | args={'command': 'order', 'symbol': '123INVALID', 'side': 'BUY', 'order_type': 'MARKET', 'quantity': 0.001, 'price': None, 'time_in_force': 'GTC', 'dry_run': True}
+2026-04-15 01:59:49 | WARNING  | cli.parser                   | -            | Validation failed | field=symbol | reason=must contain only letters (A-Z)
+2026-04-15 01:59:49 | DEBUG    | __main__                     | -            | Trading bot exiting.
+2026-04-15 01:59:50 | DEBUG    | __main__                     | -            | Trading bot starting | python=3.14.4 | argv=['order', '--symbol', 'BTCUSDT', '--side', 'BUY', '--type', 'MARKET', '--quantity', '-5', '--dry-run']
+2026-04-15 01:59:50 | DEBUG    | cli.parser                   | -            | Command=order | args={'command': 'order', 'symbol': 'BTCUSDT', 'side': 'BUY', 'order_type': 'MARKET', 'quantity': -5.0, 'price': None, 'time_in_force': 'GTC', 'dry_run': True}
+2026-04-15 01:59:50 | WARNING  | cli.parser                   | -            | Validation failed | field=quantity | reason=must be greater than 0
+2026-04-15 01:59:50 | DEBUG    | __main__                     | -            | Trading bot exiting.
+2026-04-15 01:59:50 | DEBUG    | __main__                     | -            | Trading bot starting | python=3.14.4 | argv=['order', '--symbol', 'BTCUSDT', '--side', 'BUY', '--type', 'MARKET', '--quantity', '0.001']
+2026-04-15 01:59:50 | DEBUG    | cli.parser                   | -            | Command=order | args={'command': 'order', 'symbol': 'BTCUSDT', 'side': 'BUY', 'order_type': 'MARKET', 'quantity': 0.001, 'price': None, 'time_in_force': 'GTC', 'dry_run': False}
+2026-04-15 01:59:50 | ERROR    | cli.parser                   | -            | Configuration error: Missing required environment variable(s): BINANCE_TESTNET_API_KEY, BINANCE_TESTNET_API_SECRET
+2026-04-15 01:59:50 | DEBUG    | __main__                     | -            | Trading bot exiting.
+2026-04-15 02:28:45 | DEBUG    | __main__                     | -            | Trading bot starting | python=3.14.4 | argv=['balance']
+2026-04-15 02:28:45 | DEBUG    | cli.parser                   | -            | Command=balance | args={'command': 'balance'}
+2026-04-15 02:28:45 | DEBUG    | __main__                     | -            | Trading bot exiting.
+2026-04-15 02:29:27 | DEBUG    | __main__                     | -            | Trading bot starting | python=3.14.4 | argv=['--version']
+2026-04-15 02:29:27 | DEBUG    | __main__                     | -            | Trading bot exiting.
+2026-04-15 02:29:28 | DEBUG    | __main__                     | -            | Trading bot starting | python=3.14.4 | argv=['--help']
+2026-04-15 02:29:28 | DEBUG    | __main__                     | -            | Trading bot exiting.
+2026-04-15 02:29:28 | DEBUG    | __main__                     | -            | Trading bot starting | python=3.14.4 | argv=['order', '--symbol', 'BTCUSDT', '--side', 'BUY', '--type', 'MARKET', '--quantity', '0.001', '--dry-run']
+2026-04-15 02:29:28 | DEBUG    | cli.parser                   | -            | Command=order | args={'command': 'order', 'symbol': 'BTCUSDT', 'side': 'BUY', 'order_type': 'MARKET', 'quantity': 0.001, 'price': None, 'time_in_force': 'GTC', 'dry_run': True}
+2026-04-15 02:29:28 | INFO     | cli.parser                   | -            | Dry-run complete | params={'symbol': 'BTCUSDT', 'side': 'BUY', 'order_type': 'MARKET', 'quantity': 0.001, 'price': None}
+2026-04-15 02:29:28 | DEBUG    | __main__                     | -            | Trading bot exiting.
+2026-04-15 02:34:06 | DEBUG    | __main__                     | -            | Trading bot starting | python=3.14.4 | argv=['balance']
+2026-04-15 02:34:06 | DEBUG    | cli.parser                   | -            | Command=balance | args={'command': 'balance'}
+2026-04-15 02:34:06 | DEBUG    | client.binance_client        | 87d4f230     | → GET /fapi/v2/balance | params={'timestamp': 1776200646656, 'recvWindow': 5000, 'signature': '<REDACTED>'}
+2026-04-15 02:34:06 | DEBUG    | urllib3.connectionpool       | 87d4f230     | Starting new HTTPS connection (1): testnet.binancefuture.com:443
+2026-04-15 02:34:07 | DEBUG    | urllib3.connectionpool       | 87d4f230     | https://testnet.binancefuture.com:443 "GET /fapi/v2/balance?timestamp=1776200646656&recvWindow=5000&signature=b70119a6561b0fe6e84d71f3a29577ae537daa9804cb44a578281eace235ed56 HTTP/1.1" 401 69
+2026-04-15 02:34:07 | DEBUG    | __main__                     | -            | Trading bot exiting.
+2026-04-15 02:46:58 | DEBUG    | __main__                     | -            | Trading bot starting | python=3.14.4 | argv=['balance']
+2026-04-15 02:46:58 | DEBUG    | cli.parser                   | -            | Command=balance | args={'command': 'balance'}
+2026-04-15 02:46:58 | DEBUG    | client.binance_client        | 32776d7a     | → GET /fapi/v2/balance | params={'timestamp': 1776201418355, 'recvWindow': 5000, 'signature': '<REDACTED>'}
+2026-04-15 02:46:58 | DEBUG    | urllib3.connectionpool       | 32776d7a     | Starting new HTTPS connection (1): testnet.binancefuture.com:443
+2026-04-15 02:46:59 | DEBUG    | urllib3.connectionpool       | 32776d7a     | https://testnet.binancefuture.com:443 "GET /fapi/v2/balance?timestamp=1776201418355&recvWindow=5000&signature=6a3528382e7b6022bbedbefd4803903a07907b854588bf7b9d17674a9fa9bd0c HTTP/1.1" 401 69
+2026-04-15 02:46:59 | DEBUG    | __main__                     | -            | Trading bot exiting.
+2026-04-15 02:48:08 | DEBUG    | __main__                     | -            | Trading bot starting | python=3.14.4 | argv=['balance']
+2026-04-15 02:48:08 | DEBUG    | cli.parser                   | -            | Command=balance | args={'command': 'balance'}
+2026-04-15 02:48:08 | DEBUG    | client.binance_client        | 62e1137e     | → GET /fapi/v2/balance | params={'timestamp': 1776201488906, 'recvWindow': 5000, 'signature': '<REDACTED>'}
+2026-04-15 02:48:08 | DEBUG    | urllib3.connectionpool       | 62e1137e     | Starting new HTTPS connection (1): testnet.binancefuture.com:443
+2026-04-15 02:48:09 | DEBUG    | urllib3.connectionpool       | 62e1137e     | https://testnet.binancefuture.com:443 "GET /fapi/v2/balance?timestamp=1776201488906&recvWindow=5000&signature=1b16e6082e1a4dc633b0bdb18a1ad77cc2a53ff71e531f5aa35230cee9df4078 HTTP/1.1" 401 69
+2026-04-15 02:48:09 | DEBUG    | __main__                     | -            | Trading bot exiting.
+2026-04-15 02:54:28 | DEBUG    | __main__                     | -            | Trading bot starting | python=3.14.4 | argv=['balance']
+2026-04-15 02:54:28 | DEBUG    | cli.parser                   | -            | Command=balance | args={'command': 'balance'}
+2026-04-15 02:54:28 | DEBUG    | client.binance_client        | 53bfbca3     | → GET /fapi/v2/balance | params={'timestamp': 1776201868403, 'recvWindow': 5000, 'signature': '<REDACTED>'}
+2026-04-15 02:54:28 | DEBUG    | urllib3.connectionpool       | 53bfbca3     | Starting new HTTPS connection (1): testnet.binancefuture.com:443
+2026-04-15 02:54:28 | DEBUG    | urllib3.connectionpool       | 53bfbca3     | https://testnet.binancefuture.com:443 "GET /fapi/v2/balance?timestamp=1776201868403&recvWindow=5000&signature=f03238bd2d938c83ea6d4ab8cdd7120d8489e748ac3e442479a573834db0501c HTTP/1.1" 200 None
+2026-04-15 02:54:28 | DEBUG    | __main__                     | -            | Trading bot exiting.
+2026-04-15 02:56:25 | DEBUG    | __main__                     | -            | Trading bot starting | python=3.14.4 | argv=['balance']
+2026-04-15 02:56:25 | DEBUG    | cli.parser                   | -            | Command=balance | args={'command': 'balance'}
+2026-04-15 02:56:25 | DEBUG    | client.binance_client        | e4294ca5     | → GET /fapi/v2/balance | params={'timestamp': 1776201985215, 'recvWindow': 5000, 'signature': '<REDACTED>'}
+2026-04-15 02:56:25 | DEBUG    | urllib3.connectionpool       | e4294ca5     | Starting new HTTPS connection (1): testnet.binancefuture.com:443
+2026-04-15 02:56:26 | DEBUG    | urllib3.connectionpool       | e4294ca5     | https://testnet.binancefuture.com:443 "GET /fapi/v2/balance?timestamp=1776201985215&recvWindow=5000&signature=86bc11ce8400a428573d228635740a77adb45f4da4d7f83cf8df62b1f09b1ad2 HTTP/1.1" 200 None
+2026-04-15 02:56:26 | DEBUG    | __main__                     | -            | Trading bot exiting.
+2026-04-15 02:56:33 | DEBUG    | __main__                     | -            | Trading bot starting | python=3.14.4 | argv=['orders']
+2026-04-15 02:56:33 | DEBUG    | cli.parser                   | -            | Command=orders | args={'command': 'orders', 'symbol': None}
+2026-04-15 02:56:33 | DEBUG    | client.binance_client        | ee574e24     | → GET /fapi/v1/openOrders | params={'timestamp': 1776201993542, 'recvWindow': 5000, 'signature': '<REDACTED>'}
+2026-04-15 02:56:33 | DEBUG    | urllib3.connectionpool       | ee574e24     | Starting new HTTPS connection (1): testnet.binancefuture.com:443
+2026-04-15 02:56:34 | DEBUG    | urllib3.connectionpool       | ee574e24     | https://testnet.binancefuture.com:443 "GET /fapi/v1/openOrders?timestamp=1776201993542&recvWindow=5000&signature=030af56fd8f663148fc37fc125353b56f0282048325b383f57d4c0f9fdaf6e24 HTTP/1.1" 200 2
+2026-04-15 02:56:34 | DEBUG    | __main__                     | -            | Trading bot exiting.
+2026-04-15 02:56:34 | DEBUG    | __main__                     | -            | Trading bot starting | python=3.14.4 | argv=['order', '--symbol', 'BTCUSDT', '--side', 'BUY', '--type', 'MARKET', '--quantity', '0.001', '--dry-run']
+2026-04-15 02:56:34 | DEBUG    | cli.parser                   | -            | Command=order | args={'command': 'order', 'symbol': 'BTCUSDT', 'side': 'BUY', 'order_type': 'MARKET', 'quantity': 0.001, 'price': None, 'time_in_force': 'GTC', 'dry_run': True}
+2026-04-15 02:56:34 | INFO     | cli.parser                   | -            | Dry-run complete | params={'symbol': 'BTCUSDT', 'side': 'BUY', 'order_type': 'MARKET', 'quantity': 0.001, 'price': None}
+2026-04-15 02:56:34 | DEBUG    | __main__                     | -            | Trading bot exiting.
+2026-04-15 02:56:42 | DEBUG    | __main__                     | -            | Trading bot starting | python=3.14.4 | argv=['order', '--symbol', 'BTCUSDT', '--side', 'BUY', '--type', 'MARKET', '--quantity', '0.001']
+2026-04-15 02:56:42 | DEBUG    | cli.parser                   | -            | Command=order | args={'command': 'order', 'symbol': 'BTCUSDT', 'side': 'BUY', 'order_type': 'MARKET', 'quantity': 0.001, 'price': None, 'time_in_force': 'GTC', 'dry_run': False}
+2026-04-15 02:56:42 | DEBUG    | client.binance_client        | 7560f972     | → GET /fapi/v1/time | params={}
+2026-04-15 02:56:42 | DEBUG    | urllib3.connectionpool       | 7560f972     | Starting new HTTPS connection (1): testnet.binancefuture.com:443
+2026-04-15 02:56:42 | DEBUG    | urllib3.connectionpool       | 7560f972     | https://testnet.binancefuture.com:443 "GET /fapi/v1/time HTTP/1.1" 200 28
+2026-04-15 02:56:42 | DEBUG    | client.binance_client        | 1df50b2f     | → POST /fapi/v1/order | params={'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': 0.001, 'timestamp': 1776202002750, 'recvWindow': 5000, 'signature': '<REDACTED>'}
+2026-04-15 02:56:43 | DEBUG    | urllib3.connectionpool       | 1df50b2f     | https://testnet.binancefuture.com:443 "POST /fapi/v1/order HTTP/1.1" 200 None
+2026-04-15 02:56:43 | DEBUG    | __main__                     | -            | Trading bot exiting.
+2026-04-15 02:56:43 | DEBUG    | __main__                     | -            | Trading bot starting | python=3.14.4 | argv=['balance']
+2026-04-15 02:56:43 | DEBUG    | cli.parser                   | -            | Command=balance | args={'command': 'balance'}
+2026-04-15 02:56:43 | DEBUG    | client.binance_client        | 1013184b     | → GET /fapi/v2/balance | params={'timestamp': 1776202003406, 'recvWindow': 5000, 'signature': '<REDACTED>'}
+2026-04-15 02:56:43 | DEBUG    | urllib3.connectionpool       | 1013184b     | Starting new HTTPS connection (1): testnet.binancefuture.com:443
+2026-04-15 02:56:44 | DEBUG    | urllib3.connectionpool       | 1013184b     | https://testnet.binancefuture.com:443 "GET /fapi/v2/balance?timestamp=1776202003406&recvWindow=5000&signature=841c775cfc086f4dc2f56c47b900ce26d718b34fae73d360de8502d996d627b9 HTTP/1.1" 200 None
+2026-04-15 02:56:44 | DEBUG    | __main__                     | -            | Trading bot exiting.
+2026-04-15 02:59:21 | DEBUG    | __main__                     | -            | Trading bot starting | python=3.14.4 | argv=['balance']
+2026-04-15 02:59:21 | DEBUG    | cli.parser                   | -            | Command=balance | args={'command': 'balance'}
+2026-04-15 02:59:21 | DEBUG    | client.binance_client        | 372c2eea     | → GET /fapi/v2/balance | params={'timestamp': 1776202161245, 'recvWindow': 5000, 'signature': '<REDACTED>'}
+2026-04-15 02:59:21 | DEBUG    | urllib3.connectionpool       | 372c2eea     | Starting new HTTPS connection (1): testnet.binancefuture.com:443
+2026-04-15 02:59:22 | DEBUG    | urllib3.connectionpool       | 372c2eea     | https://testnet.binancefuture.com:443 "GET /fapi/v2/balance?timestamp=1776202161245&recvWindow=5000&signature=35a379019916945798b43732afe0780e52be69dd5889ded8fb01fa1beb13dc57 HTTP/1.1" 200 None
+2026-04-15 02:59:22 | DEBUG    | __main__                     | -            | Trading bot exiting.
+2026-04-15 02:59:32 | DEBUG    | __main__                     | -            | Trading bot starting | python=3.14.4 | argv=['orders']
+2026-04-15 02:59:32 | DEBUG    | cli.parser                   | -            | Command=orders | args={'command': 'orders', 'symbol': None}
+2026-04-15 02:59:32 | DEBUG    | client.binance_client        | fe095368     | → GET /fapi/v1/openOrders | params={'timestamp': 1776202172071, 'recvWindow': 5000, 'signature': '<REDACTED>'}
+2026-04-15 02:59:32 | DEBUG    | urllib3.connectionpool       | fe095368     | Starting new HTTPS connection (1): testnet.binancefuture.com:443
+2026-04-15 02:59:32 | DEBUG    | urllib3.connectionpool       | fe095368     | https://testnet.binancefuture.com:443 "GET /fapi/v1/openOrders?timestamp=1776202172071&recvWindow=5000&signature=b76699f071c6032c98545159997695daf4bb1997d2b8fc2a51355068d68d1184 HTTP/1.1" 200 2
+2026-04-15 02:59:32 | DEBUG    | __main__                     | -            | Trading bot exiting.
+2026-04-15 02:59:52 | DEBUG    | __main__                     | -            | Trading bot starting | python=3.14.4 | argv=['order', '--symbol', 'BTCUSDT', '--side', 'SELL', '--type', 'MARKET', '--quantity', '0.001']
+2026-04-15 02:59:52 | DEBUG    | cli.parser                   | -            | Command=order | args={'command': 'order', 'symbol': 'BTCUSDT', 'side': 'SELL', 'order_type': 'MARKET', 'quantity': 0.001, 'price': None, 'time_in_force': 'GTC', 'dry_run': False}
+2026-04-15 02:59:52 | DEBUG    | client.binance_client        | 6893fa91     | → GET /fapi/v1/time | params={}
+2026-04-15 02:59:52 | DEBUG    | urllib3.connectionpool       | 6893fa91     | Starting new HTTPS connection (1): testnet.binancefuture.com:443
+2026-04-15 02:59:53 | DEBUG    | urllib3.connectionpool       | 6893fa91     | https://testnet.binancefuture.com:443 "GET /fapi/v1/time HTTP/1.1" 200 28
+2026-04-15 02:59:53 | DEBUG    | client.binance_client        | 4a7cc8a1     | → POST /fapi/v1/order | params={'symbol': 'BTCUSDT', 'side': 'SELL', 'type': 'MARKET', 'quantity': 0.001, 'timestamp': 1776202193435, 'recvWindow': 5000, 'signature': '<REDACTED>'}
+2026-04-15 02:59:53 | DEBUG    | urllib3.connectionpool       | 4a7cc8a1     | https://testnet.binancefuture.com:443 "POST /fapi/v1/order HTTP/1.1" 200 None
+2026-04-15 02:59:53 | DEBUG    | __main__                     | -            | Trading bot exiting.
+2026-04-15 03:01:24 | DEBUG    | __main__                     | -            | Trading bot starting | python=3.14.4 | argv=['orders']
+2026-04-15 03:01:24 | DEBUG    | cli.parser                   | -            | Command=orders | args={'command': 'orders', 'symbol': None}
+2026-04-15 03:01:24 | DEBUG    | client.binance_client        | dce6e8a3     | → GET /fapi/v1/openOrders | params={'timestamp': 1776202284919, 'recvWindow': 5000, 'signature': '<REDACTED>'}
+2026-04-15 03:01:24 | DEBUG    | urllib3.connectionpool       | dce6e8a3     | Starting new HTTPS connection (1): testnet.binancefuture.com:443
+2026-04-15 03:01:25 | DEBUG    | urllib3.connectionpool       | dce6e8a3     | https://testnet.binancefuture.com:443 "GET /fapi/v1/openOrders?timestamp=1776202284919&recvWindow=5000&signature=751bf810cd88d1c53a39ef92221f71638a4e08aa648fb75336b94b64581af0a8 HTTP/1.1" 200 2
+2026-04-15 03:01:25 | DEBUG    | __main__                     | -            | Trading bot exiting.
+2026-04-15 12:07:00 | DEBUG    | __main__                     | -            | Trading bot starting | python=3.14.4 | argv=[]
+2026-04-15 12:07:00 | DEBUG    | __main__                     | -            | Trading bot exiting.
+2026-04-15 12:07:08 | DEBUG    | __main__                     | -            | Trading bot starting | python=3.14.4 | argv=[]
+2026-04-15 12:07:08 | DEBUG    | __main__                     | -            | Trading bot exiting.
+2026-04-15 12:09:37 | DEBUG    | __main__                     | -            | Trading bot starting | python=3.14.4 | argv=['balance']
+2026-04-15 12:09:37 | DEBUG    | cli.parser                   | -            | Command=balance | args={'command': 'balance'}
+2026-04-15 12:09:37 | DEBUG    | client.binance_client        | 598b6cb3     | → GET /fapi/v2/balance | params={'timestamp': 1776235177664, 'recvWindow': 5000, 'signature': '<REDACTED>'}
+2026-04-15 12:09:37 | DEBUG    | urllib3.connectionpool       | 598b6cb3     | Starting new HTTPS connection (1): testnet.binancefuture.com:443
+2026-04-15 12:09:39 | DEBUG    | urllib3.connectionpool       | 598b6cb3     | https://testnet.binancefuture.com:443 "GET /fapi/v2/balance?timestamp=1776235177664&recvWindow=5000&signature=9691cf5ab2f469175d3b819dbe95f8c74022c5d692a800a910ea329fd9355f0d HTTP/1.1" 200 None
+2026-04-15 12:09:39 | DEBUG    | __main__                     | -            | Trading bot exiting.
+2026-04-15 12:13:25 | DEBUG    | __main__                     | -            | Trading bot starting | python=3.14.4 | argv=['orders']
+2026-04-15 12:13:25 | DEBUG    | cli.parser                   | -            | Command=orders | args={'command': 'orders', 'symbol': None}
+2026-04-15 12:13:25 | DEBUG    | client.binance_client        | cdd32fad     | → GET /fapi/v1/openOrders | params={'timestamp': 1776235405144, 'recvWindow': 5000, 'signature': '<REDACTED>'}
+2026-04-15 12:13:25 | DEBUG    | urllib3.connectionpool       | cdd32fad     | Starting new HTTPS connection (1): testnet.binancefuture.com:443
+2026-04-15 12:13:25 | DEBUG    | urllib3.connectionpool       | cdd32fad     | https://testnet.binancefuture.com:443 "GET /fapi/v1/openOrders?timestamp=1776235405144&recvWindow=5000&signature=a936332ffe515743dcda6a5c8816a02387eb0d76bfb244636063080c9e3cdf73 HTTP/1.1" 200 2
+2026-04-15 12:13:25 | DEBUG    | __main__                     | -            | Trading bot exiting.
+2026-04-15 12:13:43 | DEBUG    | __main__                     | -            | Trading bot starting | python=3.14.4 | argv=['order', '--symbol', 'BTCUSDT', '--side', 'SELL', '--type', 'MARKET', '--quantity', '0.001']
+2026-04-15 12:13:44 | DEBUG    | cli.parser                   | -            | Command=order | args={'command': 'order', 'symbol': 'BTCUSDT', 'side': 'SELL', 'order_type': 'MARKET', 'quantity': 0.001, 'price': None, 'time_in_force': 'GTC', 'dry_run': False}
+2026-04-15 12:13:44 | DEBUG    | client.binance_client        | 0179ac74     | → GET /fapi/v1/time | params={}
+2026-04-15 12:13:44 | DEBUG    | urllib3.connectionpool       | 0179ac74     | Starting new HTTPS connection (1): testnet.binancefuture.com:443
+2026-04-15 12:13:44 | DEBUG    | urllib3.connectionpool       | 0179ac74     | https://testnet.binancefuture.com:443 "GET /fapi/v1/time HTTP/1.1" 200 28
+2026-04-15 12:13:44 | DEBUG    | client.binance_client        | 3cd0cb0f     | → POST /fapi/v1/order | params={'symbol': 'BTCUSDT', 'side': 'SELL', 'type': 'MARKET', 'quantity': 0.001, 'timestamp': 1776235424703, 'recvWindow': 5000, 'signature': '<REDACTED>'}
+2026-04-15 12:13:44 | DEBUG    | urllib3.connectionpool       | 3cd0cb0f     | https://testnet.binancefuture.com:443 "POST /fapi/v1/order HTTP/1.1" 200 None
+2026-04-15 12:13:44 | DEBUG    | __main__                     | -            | Trading bot exiting.
+2026-04-15 22:11:52 | DEBUG    | __main__                     | -            | Trading bot starting | python=3.14.4 | argv=['order', '--symbol', 'BTCUSDT', '--side', 'BUY', '--type', 'STOP_LIMIT', '--quantity', '0.01', '--price', '60000', '--stop_price', '60500', '--dry-run']
+2026-04-15 22:11:52 | DEBUG    | cli.parser                   | -            | Command=order | args={'command': 'order', 'symbol': 'BTCUSDT', 'side': 'BUY', 'order_type': 'STOP_LIMIT', 'quantity': 0.01, 'price': 60000.0, 'time_in_force': 'GTC', 'stop_price': 60500.0, 'interval': None, 'chunks': None, 'dry_run': True}
+2026-04-15 22:11:52 | INFO     | cli.parser                   | -            | Dry-run complete | params={'symbol': 'BTCUSDT', 'side': 'BUY', 'order_type': 'STOP_LIMIT', 'quantity': 0.01, 'price': 60000.0, 'stop_price': 60500.0, 'interval': None, 'chunks': None}
+2026-04-15 22:11:52 | DEBUG    | __main__                     | -            | Trading bot exiting.
+2026-04-15 22:11:55 | DEBUG    | __main__                     | -            | Trading bot starting | python=3.14.4 | argv=['order', '--symbol', 'BTCUSDT', '--side', 'BUY', '--type', 'TWAP', '--quantity', '0.05', '--chunks', '5', '--interval', '5', '--dry-run']
+2026-04-15 22:11:55 | DEBUG    | cli.parser                   | -            | Command=order | args={'command': 'order', 'symbol': 'BTCUSDT', 'side': 'BUY', 'order_type': 'TWAP', 'quantity': 0.05, 'price': None, 'time_in_force': 'GTC', 'stop_price': None, 'interval': 5, 'chunks': 5, 'dry_run': True}
+2026-04-15 22:11:55 | INFO     | cli.parser                   | -            | Dry-run complete | params={'symbol': 'BTCUSDT', 'side': 'BUY', 'order_type': 'TWAP', 'quantity': 0.05, 'price': None, 'stop_price': None, 'interval': 5, 'chunks': 5}
+2026-04-15 22:11:55 | DEBUG    | __main__                     | -            | Trading bot exiting.
+2026-04-15 22:17:34 | DEBUG    | __main__                     | -            | Trading bot starting | python=3.14.4 | argv=['balance']
+2026-04-15 22:17:34 | DEBUG    | cli.parser                   | -            | Command=balance | args={'command': 'balance'}
+2026-04-15 22:17:34 | DEBUG    | client.binance_client        | ee245dff     | → GET /fapi/v2/balance | params={'timestamp': 1776271654314, 'recvWindow': 5000, 'signature': '<REDACTED>'}
+2026-04-15 22:17:34 | DEBUG    | urllib3.connectionpool       | ee245dff     | Starting new HTTPS connection (1): testnet.binancefuture.com:443
+2026-04-15 22:17:39 | DEBUG    | urllib3.connectionpool       | ee245dff     | https://testnet.binancefuture.com:443 "GET /fapi/v2/balance?timestamp=1776271654314&recvWindow=5000&signature=f9af9df8a5e8df2f09f89a911d4288148906291d47764e9b39f2e06821cc328b HTTP/1.1" 200 None
+2026-04-15 22:17:39 | DEBUG    | __main__                     | -            | Trading bot exiting.
+2026-04-15 22:19:59 | DEBUG    | __main__                     | -            | Trading bot starting | python=3.14.4 | argv=['order', '--symbol', 'BTCUSDT', '--side', 'BUY', '--type', 'STOP_LIMIT', '--quantity', '0.01', '--price', '60000', '--stop_price', '60500']
+2026-04-15 22:19:59 | DEBUG    | cli.parser                   | -            | Command=order | args={'command': 'order', 'symbol': 'BTCUSDT', 'side': 'BUY', 'order_type': 'STOP_LIMIT', 'quantity': 0.01, 'price': 60000.0, 'time_in_force': 'GTC', 'stop_price': 60500.0, 'interval': None, 'chunks': None, 'dry_run': False}
+2026-04-15 22:19:59 | DEBUG    | client.binance_client        | b5dfd3f8     | → GET /fapi/v1/time | params={}
+2026-04-15 22:19:59 | DEBUG    | urllib3.connectionpool       | b5dfd3f8     | Starting new HTTPS connection (1): testnet.binancefuture.com:443
+2026-04-15 22:20:03 | DEBUG    | urllib3.connectionpool       | b5dfd3f8     | https://testnet.binancefuture.com:443 "GET /fapi/v1/time HTTP/1.1" 200 28
+2026-04-15 22:20:03 | DEBUG    | client.binance_client        | 1ae6a18e     | → POST /fapi/v1/order | params={'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'STOP', 'quantity': 0.01, 'price': 60000.0, 'timeInForce': 'GTC', 'stopPrice': 60500.0, 'timestamp': 1776271803063, 'recvWindow': 5000, 'signature': '<REDACTED>'}
+2026-04-15 22:20:03 | DEBUG    | urllib3.connectionpool       | 1ae6a18e     | https://testnet.binancefuture.com:443 "POST /fapi/v1/order HTTP/1.1" 400 115
+2026-04-15 22:20:03 | ERROR    | cli.parser                   | -            | Binance API error | code=-4120 | Binance error [-4120]: Order type not supported for this endpoint. Please use the Algo Order API endpoints instead.
+2026-04-15 22:20:03 | DEBUG    | __main__                     | -            | Trading bot exiting.
+2026-04-15 22:21:54 | DEBUG    | __main__                     | -            | Trading bot starting | python=3.14.4 | argv=['order', '--symbol', 'BTCUSDT', '--side', 'BUY', '--type', 'TWAP', '--quantity', '0.05', '--chunks', '5', '--interval', '5']
+2026-04-15 22:21:54 | DEBUG    | cli.parser                   | -            | Command=order | args={'command': 'order', 'symbol': 'BTCUSDT', 'side': 'BUY', 'order_type': 'TWAP', 'quantity': 0.05, 'price': None, 'time_in_force': 'GTC', 'stop_price': None, 'interval': 5, 'chunks': 5, 'dry_run': False}
+2026-04-15 22:21:54 | DEBUG    | client.binance_client        | afb7d299     | → GET /fapi/v1/time | params={}
+2026-04-15 22:21:54 | DEBUG    | urllib3.connectionpool       | afb7d299     | Starting new HTTPS connection (1): testnet.binancefuture.com:443
+2026-04-15 22:21:58 | DEBUG    | urllib3.connectionpool       | afb7d299     | https://testnet.binancefuture.com:443 "GET /fapi/v1/time HTTP/1.1" 200 28
+2026-04-15 22:21:58 | INFO     | cli.parser                   | -            | Starting TWAP execution: 5 chunks of 0.01 every 5s
+2026-04-15 22:21:58 | INFO     | cli.parser                   | -            | TWAP chunk 1/5 placing...
+2026-04-15 22:21:58 | DEBUG    | client.binance_client        | a5d7a96c     | → POST /fapi/v1/order | params={'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': 0.01, 'timestamp': 1776271918488, 'recvWindow': 5000, 'signature': '<REDACTED>'}
+2026-04-15 22:21:59 | DEBUG    | urllib3.connectionpool       | a5d7a96c     | https://testnet.binancefuture.com:443 "POST /fapi/v1/order HTTP/1.1" 200 None
+2026-04-15 22:22:04 | INFO     | cli.parser                   | -            | TWAP chunk 2/5 placing...
+2026-04-15 22:22:04 | DEBUG    | client.binance_client        | f3065426     | → POST /fapi/v1/order | params={'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': 0.01, 'timestamp': 1776271924520, 'recvWindow': 5000, 'signature': '<REDACTED>'}
+2026-04-15 22:22:05 | DEBUG    | urllib3.connectionpool       | f3065426     | https://testnet.binancefuture.com:443 "POST /fapi/v1/order HTTP/1.1" 200 None
+2026-04-15 22:22:10 | INFO     | cli.parser                   | -            | TWAP chunk 3/5 placing...
+2026-04-15 22:22:10 | DEBUG    | client.binance_client        | ac18dc09     | → POST /fapi/v1/order | params={'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': 0.01, 'timestamp': 1776271930522, 'recvWindow': 5000, 'signature': '<REDACTED>'}
+2026-04-15 22:22:11 | DEBUG    | urllib3.connectionpool       | ac18dc09     | https://testnet.binancefuture.com:443 "POST /fapi/v1/order HTTP/1.1" 200 None
+2026-04-15 22:22:16 | INFO     | cli.parser                   | -            | TWAP chunk 4/5 placing...
+2026-04-15 22:22:16 | DEBUG    | client.binance_client        | b742dd2c     | → POST /fapi/v1/order | params={'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': 0.01, 'timestamp': 1776271936612, 'recvWindow': 5000, 'signature': '<REDACTED>'}
+2026-04-15 22:22:17 | DEBUG    | urllib3.connectionpool       | b742dd2c     | https://testnet.binancefuture.com:443 "POST /fapi/v1/order HTTP/1.1" 200 None
+2026-04-15 22:22:22 | INFO     | cli.parser                   | -            | TWAP chunk 5/5 placing...
+2026-04-15 22:22:22 | DEBUG    | client.binance_client        | e6dcf431     | → POST /fapi/v1/order | params={'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': 0.01, 'timestamp': 1776271942856, 'recvWindow': 5000, 'signature': '<REDACTED>'}
+2026-04-15 22:22:23 | DEBUG    | urllib3.connectionpool       | e6dcf431     | https://testnet.binancefuture.com:443 "POST /fapi/v1/order HTTP/1.1" 200 None
+2026-04-15 22:22:23 | DEBUG    | __main__                     | -            | Trading bot exiting.
+2026-04-15 22:28:37 | DEBUG    | __main__                     | -            | Trading bot starting | python=3.14.4 | argv=['order', '--help']
+2026-04-15 22:28:37 | DEBUG    | __main__                     | -            | Trading bot exiting.
+2026-04-15 22:36:58 | DEBUG    | __main__                     | -            | Trading bot starting | python=3.14.4 | argv=['balance']
+2026-04-15 22:36:58 | DEBUG    | cli.parser                   | -            | Command=balance | args={'command': 'balance'}
+2026-04-15 22:36:58 | DEBUG    | client.binance_client        | 545e8b81     | → GET /fapi/v2/balance | params={'timestamp': 1776272818449, 'recvWindow': 5000, 'signature': '<REDACTED>'}
+2026-04-15 22:36:58 | DEBUG    | urllib3.connectionpool       | 545e8b81     | Starting new HTTPS connection (1): testnet.binancefuture.com:443
+2026-04-15 22:37:03 | DEBUG    | urllib3.connectionpool       | 545e8b81     | https://testnet.binancefuture.com:443 "GET /fapi/v2/balance?timestamp=1776272818449&recvWindow=5000&signature=f277f8279e9d82a53352d216da33627c288a8c2618eded9306f2a5a9c9fef126 HTTP/1.1" 200 None
+2026-04-15 22:37:03 | DEBUG    | __main__                     | -            | Trading bot exiting.
+2026-04-15 22:37:25 | DEBUG    | __main__                     | -            | Trading bot starting | python=3.14.4 | argv=['orders']
+2026-04-15 22:37:25 | DEBUG    | cli.parser                   | -            | Command=orders | args={'command': 'orders', 'symbol': None}
+2026-04-15 22:37:25 | DEBUG    | client.binance_client        | 84ce8b1d     | → GET /fapi/v1/openOrders | params={'timestamp': 1776272845775, 'recvWindow': 5000, 'signature': '<REDACTED>'}
+2026-04-15 22:37:25 | DEBUG    | urllib3.connectionpool       | 84ce8b1d     | Starting new HTTPS connection (1): testnet.binancefuture.com:443
+2026-04-15 22:37:28 | DEBUG    | urllib3.connectionpool       | 84ce8b1d     | https://testnet.binancefuture.com:443 "GET /fapi/v1/openOrders?timestamp=1776272845775&recvWindow=5000&signature=caf80322a63e3e2fe8501d9c16cc377eda825e8b7440442310145836f2f9393d HTTP/1.1" 200 2
+2026-04-15 22:37:28 | DEBUG    | __main__                     | -            | Trading bot exiting.
+2026-04-15 23:29:48 | DEBUG    | __main__                     | -            | Trading bot starting | python=3.14.4 | argv=['--help']
+2026-04-15 23:29:48 | DEBUG    | __main__                     | -            | Trading bot exiting.
+2026-04-15 23:29:56 | DEBUG    | __main__                     | -            | Trading bot starting | python=3.14.4 | argv=['balance']
+2026-04-15 23:29:56 | DEBUG    | __main__                     | -            | Command=balance | args={'command': 'balance'}
+2026-04-15 23:29:56 | DEBUG    | bot.client                   | fae684f3     | → GET /fapi/v2/balance | params={'timestamp': 1776275996140, 'recvWindow': 5000, 'signature': '<REDACTED>'}
+2026-04-15 23:29:56 | DEBUG    | urllib3.connectionpool       | fae684f3     | Starting new HTTPS connection (1): testnet.binancefuture.com:443
+2026-04-15 23:29:58 | DEBUG    | urllib3.connectionpool       | fae684f3     | https://testnet.binancefuture.com:443 "GET /fapi/v2/balance?timestamp=1776275996140&recvWindow=5000&signature=8055f158596057586f79fc944d940d71ad4555a0785d019e00494507ef163b80 HTTP/1.1" 200 None
+2026-04-15 23:29:58 | DEBUG    | __main__                     | -            | Trading bot exiting.
+2026-04-15 23:30:06 | DEBUG    | __main__                     | -            | Trading bot starting | python=3.14.4 | argv=['order', '--symbol', 'BTCUSDT', '--side', 'BUY', '--type', 'MARKET', '--quantity', '0.001', '--dry-run']
+2026-04-15 23:30:06 | DEBUG    | __main__                     | -            | Command=order | args={'command': 'order', 'symbol': 'BTCUSDT', 'side': 'BUY', 'order_type': 'MARKET', 'quantity': 0.001, 'price': None, 'time_in_force': 'GTC', 'interval': None, 'chunks': None, 'dry_run': True}
+2026-04-15 23:30:06 | INFO     | __main__                     | -            | Dry-run complete | params={'symbol': 'BTCUSDT', 'side': 'BUY', 'order_type': 'MARKET', 'quantity': 0.001, 'price': None, 'interval': None, 'chunks': None}
+2026-04-15 23:30:06 | DEBUG    | __main__                     | -            | Trading bot exiting.
+2026-04-15 23:34:47 | DEBUG    | __main__                     | -            | Trading bot starting | python=3.14.4 | argv=['--version']
+2026-04-15 23:34:47 | DEBUG    | __main__                     | -            | Trading bot exiting.
+2026-04-15 23:35:04 | DEBUG    | __main__                     | -            | Trading bot starting | python=3.14.4 | argv=['order', '--symbol', 'BTCUSDT', '--side', 'BUY', '--type', 'MARKET', '--quantity', '0.001', '--dry-run']
+2026-04-15 23:35:04 | DEBUG    | __main__                     | -            | Command=order | args={'command': 'order', 'symbol': 'BTCUSDT', 'side': 'BUY', 'order_type': 'MARKET', 'quantity': 0.001, 'price': None, 'time_in_force': 'GTC', 'interval': None, 'chunks': None, 'dry_run': True}
+2026-04-15 23:35:04 | INFO     | __main__                     | -            | Dry-run complete | params={'symbol': 'BTCUSDT', 'side': 'BUY', 'order_type': 'MARKET', 'quantity': 0.001, 'price': None, 'interval': None, 'chunks': None}
+2026-04-15 23:35:04 | DEBUG    | __main__                     | -            | Trading bot exiting.
+2026-04-15 23:35:07 | DEBUG    | __main__                     | -            | Trading bot starting | python=3.14.4 | argv=['order', '--symbol', 'BTCUSDT', '--side', 'BUY', '--type', 'LIMIT', '--quantity', '0.01', '--price', '60000', '--dry-run']
+2026-04-15 23:35:07 | DEBUG    | __main__                     | -            | Command=order | args={'command': 'order', 'symbol': 'BTCUSDT', 'side': 'BUY', 'order_type': 'LIMIT', 'quantity': 0.01, 'price': 60000.0, 'time_in_force': 'GTC', 'interval': None, 'chunks': None, 'dry_run': True}
+2026-04-15 23:35:07 | INFO     | __main__                     | -            | Dry-run complete | params={'symbol': 'BTCUSDT', 'side': 'BUY', 'order_type': 'LIMIT', 'quantity': 0.01, 'price': 60000.0, 'interval': None, 'chunks': None}
+2026-04-15 23:35:07 | DEBUG    | __main__                     | -            | Trading bot exiting.
+2026-04-15 23:36:14 | DEBUG    | __main__                     | -            | Trading bot starting | python=3.14.4 | argv=['order', '--symbol', 'BTCUSDT', '--side', 'BUY', '--type', 'TWAP', '--quantity', '0.05', '--chunks', '5', '--interval', '5', '--dry-run']
+2026-04-15 23:36:14 | DEBUG    | __main__                     | -            | Command=order | args={'command': 'order', 'symbol': 'BTCUSDT', 'side': 'BUY', 'order_type': 'TWAP', 'quantity': 0.05, 'price': None, 'time_in_force': 'GTC', 'interval': 5, 'chunks': 5, 'dry_run': True}
+2026-04-15 23:36:14 | INFO     | __main__                     | -            | Dry-run complete | params={'symbol': 'BTCUSDT', 'side': 'BUY', 'order_type': 'TWAP', 'quantity': 0.05, 'price': None, 'interval': 5, 'chunks': 5}
+2026-04-15 23:36:14 | DEBUG    | __main__                     | -            | Trading bot exiting.
+2026-04-15 23:36:36 | DEBUG    | __main__                     | -            | Trading bot starting | python=3.14.4 | argv=['balance']
+2026-04-15 23:36:36 | DEBUG    | __main__                     | -            | Command=balance | args={'command': 'balance'}
+2026-04-15 23:36:36 | DEBUG    | bot.client                   | 28f5987d     | → GET /fapi/v2/balance | params={'timestamp': 1776276396008, 'recvWindow': 5000, 'signature': '<REDACTED>'}
+2026-04-15 23:36:36 | DEBUG    | urllib3.connectionpool       | 28f5987d     | Starting new HTTPS connection (1): testnet.binancefuture.com:443
+2026-04-15 23:36:38 | DEBUG    | urllib3.connectionpool       | 28f5987d     | https://testnet.binancefuture.com:443 "GET /fapi/v2/balance?timestamp=1776276396008&recvWindow=5000&signature=73cb020b4dbe4f9cfaf291cf499e751cb42eda428311343f3c0756ed936ac7fd HTTP/1.1" 200 None
+2026-04-15 23:36:38 | DEBUG    | __main__                     | -            | Trading bot exiting.
+2026-04-15 23:36:42 | DEBUG    | __main__                     | -            | Trading bot starting | python=3.14.4 | argv=['orders', '--symbol', 'BTCUSDT']
+2026-04-15 23:36:42 | DEBUG    | __main__                     | -            | Command=orders | args={'command': 'orders', 'symbol': 'BTCUSDT'}
+2026-04-15 23:36:42 | DEBUG    | bot.client                   | 59c0e8c8     | → GET /fapi/v1/openOrders | params={'symbol': 'BTCUSDT', 'timestamp': 1776276402114, 'recvWindow': 5000, 'signature': '<REDACTED>'}
+2026-04-15 23:36:42 | DEBUG    | urllib3.connectionpool       | 59c0e8c8     | Starting new HTTPS connection (1): testnet.binancefuture.com:443
+2026-04-15 23:36:44 | DEBUG    | urllib3.connectionpool       | 59c0e8c8     | https://testnet.binancefuture.com:443 "GET /fapi/v1/openOrders?symbol=BTCUSDT&timestamp=1776276402114&recvWindow=5000&signature=c05fa646b7476d600e15fb8a837e122d99c8ec21aec895019620bdea2aa373e7 HTTP/1.1" 200 2
+2026-04-15 23:36:44 | DEBUG    | __main__                     | -            | Trading bot exiting.
+2026-04-15 23:36:54 | DEBUG    | __main__                     | -            | Trading bot starting | python=3.14.4 | argv=['order', '--symbol', 'BTCUSDT', '--side', 'BUY', '--type', 'MARKET', '--quantity', '0.001']
+2026-04-15 23:36:54 | DEBUG    | __main__                     | -            | Command=order | args={'command': 'order', 'symbol': 'BTCUSDT', 'side': 'BUY', 'order_type': 'MARKET', 'quantity': 0.001, 'price': None, 'time_in_force': 'GTC', 'interval': None, 'chunks': None, 'dry_run': False}
+2026-04-15 23:36:54 | DEBUG    | bot.client                   | 7a4d0f2d     | → GET /fapi/v1/time | params={}
+2026-04-15 23:36:54 | DEBUG    | urllib3.connectionpool       | 7a4d0f2d     | Starting new HTTPS connection (1): testnet.binancefuture.com:443
+2026-04-15 23:36:56 | DEBUG    | urllib3.connectionpool       | 7a4d0f2d     | https://testnet.binancefuture.com:443 "GET /fapi/v1/time HTTP/1.1" 200 28
+2026-04-15 23:36:56 | INFO     | bot.orders                   | -            | ORDER_TYPE:MARKET | Placing MARKET order | symbol=BTCUSDT side=BUY qty=0.001
+2026-04-15 23:36:56 | DEBUG    | bot.client                   | 06838972     | → POST /fapi/v1/order | params={'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': 0.001, 'timestamp': 1776276416228, 'recvWindow': 5000, 'signature': '<REDACTED>'}
+2026-04-15 23:36:57 | DEBUG    | urllib3.connectionpool       | 06838972     | https://testnet.binancefuture.com:443 "POST /fapi/v1/order HTTP/1.1" 200 None
+2026-04-15 23:36:57 | INFO     | bot.orders                   | -            | ORDER_TYPE:MARKET | MARKET order placed | orderId=13037500448 status=NEW
+2026-04-15 23:36:57 | DEBUG    | __main__                     | -            | Trading bot exiting.
+2026-04-15 23:39:12 | DEBUG    | __main__                     | -            | Trading bot starting | python=3.14.4 | argv=['order', '--symbol', 'BTCUSDT', '--side', 'BUY', '--type', 'LIMIT', '--quantity', '0.01', '--price', '50000']
+2026-04-15 23:39:12 | DEBUG    | __main__                     | -            | Command=order | args={'command': 'order', 'symbol': 'BTCUSDT', 'side': 'BUY', 'order_type': 'LIMIT', 'quantity': 0.01, 'price': 50000.0, 'time_in_force': 'GTC', 'interval': None, 'chunks': None, 'dry_run': False}
+2026-04-15 23:39:12 | DEBUG    | bot.client                   | c52f3032     | → GET /fapi/v1/time | params={}
+2026-04-15 23:39:12 | DEBUG    | urllib3.connectionpool       | c52f3032     | Starting new HTTPS connection (1): testnet.binancefuture.com:443
+2026-04-15 23:39:16 | DEBUG    | urllib3.connectionpool       | c52f3032     | https://testnet.binancefuture.com:443 "GET /fapi/v1/time HTTP/1.1" 200 28
+2026-04-15 23:39:16 | INFO     | bot.orders                   | -            | ORDER_TYPE:LIMIT | Placing LIMIT order | symbol=BTCUSDT side=BUY qty=0.01 price=50000.0 tif=GTC
+2026-04-15 23:39:16 | DEBUG    | bot.client                   | 986c61e8     | → POST /fapi/v1/order | params={'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'LIMIT', 'quantity': 0.01, 'price': 50000.0, 'timeInForce': 'GTC', 'timestamp': 1776276556052, 'recvWindow': 5000, 'signature': '<REDACTED>'}
+2026-04-15 23:39:16 | DEBUG    | urllib3.connectionpool       | 986c61e8     | https://testnet.binancefuture.com:443 "POST /fapi/v1/order HTTP/1.1" 200 None
+2026-04-15 23:39:16 | INFO     | bot.orders                   | -            | ORDER_TYPE:LIMIT | LIMIT order placed | orderId=13037503164 status=NEW
+2026-04-15 23:39:16 | DEBUG    | __main__                     | -            | Trading bot exiting.
+2026-04-15 23:39:25 | DEBUG    | __main__                     | -            | Trading bot starting | python=3.14.4 | argv=['order', '--symbol', 'BTCUSDT', '--side', 'BUY', '--type', 'TWAP', '--quantity', '0.03', '--chunks', '3', '--interval', '3']
+2026-04-15 23:39:25 | DEBUG    | __main__                     | -            | Command=order | args={'command': 'order', 'symbol': 'BTCUSDT', 'side': 'BUY', 'order_type': 'TWAP', 'quantity': 0.03, 'price': None, 'time_in_force': 'GTC', 'interval': 3, 'chunks': 3, 'dry_run': False}
+2026-04-15 23:39:25 | DEBUG    | bot.client                   | 516f11cf     | → GET /fapi/v1/time | params={}
+2026-04-15 23:39:25 | DEBUG    | urllib3.connectionpool       | 516f11cf     | Starting new HTTPS connection (1): testnet.binancefuture.com:443
+2026-04-15 23:39:28 | DEBUG    | urllib3.connectionpool       | 516f11cf     | https://testnet.binancefuture.com:443 "GET /fapi/v1/time HTTP/1.1" 200 28
+2026-04-15 23:39:28 | INFO     | bot.orders                   | -            | ORDER_TYPE:TWAP | Starting TWAP | symbol=BTCUSDT side=BUY total_qty=0.03 chunks=3 interval=3s sub_type=MARKET
+2026-04-15 23:39:28 | INFO     | bot.orders                   | -            | ORDER_TYPE:TWAP | Chunk 1/3 | symbol=BTCUSDT qty=0.01
+2026-04-15 23:39:28 | DEBUG    | bot.client                   | 1c36506f     | → POST /fapi/v1/order | params={'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': 0.01, 'timestamp': 1776276568606, 'recvWindow': 5000, 'signature': '<REDACTED>'}
+2026-04-15 23:39:29 | DEBUG    | urllib3.connectionpool       | 1c36506f     | https://testnet.binancefuture.com:443 "POST /fapi/v1/order HTTP/1.1" 200 None
+2026-04-15 23:39:29 | INFO     | bot.orders                   | -            | ORDER_TYPE:TWAP | Chunk 1/3 placed | orderId=13037504139 status=NEW
+2026-04-15 23:39:32 | INFO     | bot.orders                   | -            | ORDER_TYPE:TWAP | Chunk 2/3 | symbol=BTCUSDT qty=0.01
+2026-04-15 23:39:32 | DEBUG    | bot.client                   | 1f900231     | → POST /fapi/v1/order | params={'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': 0.01, 'timestamp': 1776276572758, 'recvWindow': 5000, 'signature': '<REDACTED>'}
+2026-04-15 23:39:33 | DEBUG    | urllib3.connectionpool       | 1f900231     | https://testnet.binancefuture.com:443 "POST /fapi/v1/order HTTP/1.1" 200 None
+2026-04-15 23:39:33 | INFO     | bot.orders                   | -            | ORDER_TYPE:TWAP | Chunk 2/3 placed | orderId=13037504463 status=NEW
+2026-04-15 23:39:36 | INFO     | bot.orders                   | -            | ORDER_TYPE:TWAP | Chunk 3/3 | symbol=BTCUSDT qty=0.01
+2026-04-15 23:39:36 | DEBUG    | bot.client                   | d2427263     | → POST /fapi/v1/order | params={'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': 0.01, 'timestamp': 1776276576438, 'recvWindow': 5000, 'signature': '<REDACTED>'}
+2026-04-15 23:39:37 | DEBUG    | urllib3.connectionpool       | d2427263     | https://testnet.binancefuture.com:443 "POST /fapi/v1/order HTTP/1.1" 200 None
+2026-04-15 23:39:37 | INFO     | bot.orders                   | -            | ORDER_TYPE:TWAP | Chunk 3/3 placed | orderId=13037504819 status=NEW
+2026-04-15 23:39:37 | INFO     | bot.orders                   | -            | ORDER_TYPE:TWAP | TWAP completed | symbol=BTCUSDT total_chunks=3
+2026-04-15 23:39:37 | DEBUG    | __main__                     | -            | Trading bot exiting.
+2026-04-15 23:42:31 | DEBUG    | __main__                     | -            | Trading bot starting | python=3.14.4 | argv=['--version']
+2026-04-15 23:42:31 | DEBUG    | __main__                     | -            | Trading bot exiting.
+2026-04-15 23:42:46 | DEBUG    | __main__                     | -            | Trading bot starting | python=3.14.4 | argv=['order', '--symbol', 'BTCUSDT', '--side', 'BUY', '--type', 'MARKET', '--quantity', '0.001', '--dry-run']
+2026-04-15 23:42:46 | DEBUG    | __main__                     | -            | Command=order | args={'command': 'order', 'symbol': 'BTCUSDT', 'side': 'BUY', 'order_type': 'MARKET', 'quantity': 0.001, 'price': None, 'time_in_force': 'GTC', 'interval': None, 'chunks': None, 'dry_run': True}
+2026-04-15 23:42:46 | INFO     | __main__                     | -            | Dry-run complete | params={'symbol': 'BTCUSDT', 'side': 'BUY', 'order_type': 'MARKET', 'quantity': 0.001, 'price': None, 'interval': None, 'chunks': None}
+2026-04-15 23:42:46 | DEBUG    | __main__                     | -            | Trading bot exiting.
+2026-04-15 23:43:09 | DEBUG    | __main__                     | -            | Trading bot starting | python=3.14.4 | argv=['order', '--symbol', 'BTCUSDT', '--side', 'BUY', '--type', 'LIMIT', '--quantity', '0.01', '--price', '60000', '--dry-run']
+2026-04-15 23:43:09 | DEBUG    | __main__                     | -            | Command=order | args={'command': 'order', 'symbol': 'BTCUSDT', 'side': 'BUY', 'order_type': 'LIMIT', 'quantity': 0.01, 'price': 60000.0, 'time_in_force': 'GTC', 'interval': None, 'chunks': None, 'dry_run': True}
+2026-04-15 23:43:09 | INFO     | __main__                     | -            | Dry-run complete | params={'symbol': 'BTCUSDT', 'side': 'BUY', 'order_type': 'LIMIT', 'quantity': 0.01, 'price': 60000.0, 'interval': None, 'chunks': None}
+2026-04-15 23:43:09 | DEBUG    | __main__                     | -            | Trading bot exiting.
+2026-04-15 23:43:29 | DEBUG    | __main__                     | -            | Trading bot starting | python=3.14.4 | argv=['order', '--symbol', 'BTCUSDT', '--side', 'BUY', '--type', 'TWAP', '--quantity', '0.05', '--chunks', '5', '--interval', '5', '--dry-run']
+2026-04-15 23:43:29 | DEBUG    | __main__                     | -            | Command=order | args={'command': 'order', 'symbol': 'BTCUSDT', 'side': 'BUY', 'order_type': 'TWAP', 'quantity': 0.05, 'price': None, 'time_in_force': 'GTC', 'interval': 5, 'chunks': 5, 'dry_run': True}
+2026-04-15 23:43:29 | INFO     | __main__                     | -            | Dry-run complete | params={'symbol': 'BTCUSDT', 'side': 'BUY', 'order_type': 'TWAP', 'quantity': 0.05, 'price': None, 'interval': 5, 'chunks': 5}
+2026-04-15 23:43:29 | DEBUG    | __main__                     | -            | Trading bot exiting.
+2026-04-16 00:13:12 | DEBUG    | __main__                     | -            | Trading bot starting | python=3.14.4 | argv=['order', '--symbol', 'BTCUSDT', '--side', 'BUY', '--type', 'MARKET', '--quantity', '0.001']
+2026-04-16 00:13:12 | DEBUG    | __main__                     | -            | Command=order | args={'command': 'order', 'symbol': 'BTCUSDT', 'side': 'BUY', 'order_type': 'MARKET', 'quantity': 0.001, 'price': None, 'time_in_force': 'GTC', 'interval': None, 'chunks': None, 'dry_run': False}
+2026-04-16 00:13:12 | DEBUG    | bot.client                   | 040c8720     | → GET /fapi/v1/time | params={}
+2026-04-16 00:13:12 | DEBUG    | urllib3.connectionpool       | 040c8720     | Starting new HTTPS connection (1): testnet.binancefuture.com:443
+2026-04-16 00:13:15 | DEBUG    | urllib3.connectionpool       | 040c8720     | https://testnet.binancefuture.com:443 "GET /fapi/v1/time HTTP/1.1" 200 28
+2026-04-16 00:13:15 | INFO     | bot.orders                   | -            | ORDER_TYPE:MARKET | Placing MARKET order | symbol=BTCUSDT side=BUY qty=0.001
+2026-04-16 00:13:15 | DEBUG    | bot.client                   | d6eb3f52     | → POST /fapi/v1/order | params={'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': 0.001, 'timestamp': 1776278595311, 'recvWindow': 5000, 'signature': '<REDACTED>'}
+2026-04-16 00:13:15 | DEBUG    | urllib3.connectionpool       | d6eb3f52     | https://testnet.binancefuture.com:443 "POST /fapi/v1/order HTTP/1.1" 200 None
+2026-04-16 00:13:15 | INFO     | bot.orders                   | -            | ORDER_TYPE:MARKET | MARKET order placed | orderId=13037549282 status=NEW
+2026-04-16 00:13:15 | DEBUG    | __main__                     | -            | Trading bot exiting.
+2026-04-16 00:13:32 | DEBUG    | __main__                     | -            | Trading bot starting | python=3.14.4 | argv=['order', '--symbol', 'BTCUSDT', '--side', 'BUY', '--type', 'LIMIT', '--quantity', '0.01', '--price', '60000']
+2026-04-16 00:13:32 | DEBUG    | __main__                     | -            | Command=order | args={'command': 'order', 'symbol': 'BTCUSDT', 'side': 'BUY', 'order_type': 'LIMIT', 'quantity': 0.01, 'price': 60000.0, 'time_in_force': 'GTC', 'interval': None, 'chunks': None, 'dry_run': False}
+2026-04-16 00:13:32 | DEBUG    | bot.client                   | c4ce10c3     | → GET /fapi/v1/time | params={}
+2026-04-16 00:13:32 | DEBUG    | urllib3.connectionpool       | c4ce10c3     | Starting new HTTPS connection (1): testnet.binancefuture.com:443
+2026-04-16 00:13:34 | DEBUG    | urllib3.connectionpool       | c4ce10c3     | https://testnet.binancefuture.com:443 "GET /fapi/v1/time HTTP/1.1" 200 28
+2026-04-16 00:13:34 | INFO     | bot.orders                   | -            | ORDER_TYPE:LIMIT | Placing LIMIT order | symbol=BTCUSDT side=BUY qty=0.01 price=60000.0 tif=GTC
+2026-04-16 00:13:34 | DEBUG    | bot.client                   | f48bac35     | → POST /fapi/v1/order | params={'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'LIMIT', 'quantity': 0.01, 'price': 60000.0, 'timeInForce': 'GTC', 'timestamp': 1776278614137, 'recvWindow': 5000, 'signature': '<REDACTED>'}
+2026-04-16 00:13:35 | DEBUG    | urllib3.connectionpool       | f48bac35     | https://testnet.binancefuture.com:443 "POST /fapi/v1/order HTTP/1.1" 200 None
+2026-04-16 00:13:35 | INFO     | bot.orders                   | -            | ORDER_TYPE:LIMIT | LIMIT order placed | orderId=13037550058 status=NEW
+2026-04-16 00:13:35 | DEBUG    | __main__                     | -            | Trading bot exiting.
+2026-04-16 00:13:45 | DEBUG    | __main__                     | -            | Trading bot starting | python=3.14.4 | argv=['order', '--symbol', 'BTCUSDT', '--side', 'BUY', '--type', 'TWAP', '--quantity', '0.05', '--chunks', '5', '--interval', '10']
+2026-04-16 00:13:45 | DEBUG    | __main__                     | -            | Command=order | args={'command': 'order', 'symbol': 'BTCUSDT', 'side': 'BUY', 'order_type': 'TWAP', 'quantity': 0.05, 'price': None, 'time_in_force': 'GTC', 'interval': 10, 'chunks': 5, 'dry_run': False}
+2026-04-16 00:13:45 | DEBUG    | bot.client                   | d9333790     | → GET /fapi/v1/time | params={}
+2026-04-16 00:13:45 | DEBUG    | urllib3.connectionpool       | d9333790     | Starting new HTTPS connection (1): testnet.binancefuture.com:443
+2026-04-16 00:13:47 | DEBUG    | urllib3.connectionpool       | d9333790     | https://testnet.binancefuture.com:443 "GET /fapi/v1/time HTTP/1.1" 200 28
+2026-04-16 00:13:47 | INFO     | bot.orders                   | -            | ORDER_TYPE:TWAP | Starting TWAP | symbol=BTCUSDT side=BUY total_qty=0.05 chunks=5 interval=10s sub_type=MARKET
+2026-04-16 00:13:47 | INFO     | bot.orders                   | -            | ORDER_TYPE:TWAP | Chunk 1/5 | symbol=BTCUSDT qty=0.01
+2026-04-16 00:13:47 | DEBUG    | bot.client                   | cf89b5f8     | → POST /fapi/v1/order | params={'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': 0.01, 'timestamp': 1776278627575, 'recvWindow': 5000, 'signature': '<REDACTED>'}
+2026-04-16 00:13:48 | DEBUG    | urllib3.connectionpool       | cf89b5f8     | https://testnet.binancefuture.com:443 "POST /fapi/v1/order HTTP/1.1" 200 None
+2026-04-16 00:13:48 | INFO     | bot.orders                   | -            | ORDER_TYPE:TWAP | Chunk 1/5 placed | orderId=13037550831 status=NEW
+2026-04-16 00:13:58 | INFO     | bot.orders                   | -            | ORDER_TYPE:TWAP | Chunk 2/5 | symbol=BTCUSDT qty=0.01
+2026-04-16 00:13:58 | DEBUG    | bot.client                   | 1be73ccf     | → POST /fapi/v1/order | params={'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': 0.01, 'timestamp': 1776278638243, 'recvWindow': 5000, 'signature': '<REDACTED>'}
+2026-04-16 00:13:59 | DEBUG    | urllib3.connectionpool       | 1be73ccf     | https://testnet.binancefuture.com:443 "POST /fapi/v1/order HTTP/1.1" 200 None
+2026-04-16 00:13:59 | INFO     | bot.orders                   | -            | ORDER_TYPE:TWAP | Chunk 2/5 placed | orderId=13037551072 status=NEW
+2026-04-16 00:14:09 | INFO     | bot.orders                   | -            | ORDER_TYPE:TWAP | Chunk 3/5 | symbol=BTCUSDT qty=0.01
+2026-04-16 00:14:09 | DEBUG    | bot.client                   | 38d35a87     | → POST /fapi/v1/order | params={'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': 0.01, 'timestamp': 1776278649092, 'recvWindow': 5000, 'signature': '<REDACTED>'}
+2026-04-16 00:14:09 | DEBUG    | urllib3.connectionpool       | 38d35a87     | https://testnet.binancefuture.com:443 "POST /fapi/v1/order HTTP/1.1" 200 None
+2026-04-16 00:14:09 | INFO     | bot.orders                   | -            | ORDER_TYPE:TWAP | Chunk 3/5 placed | orderId=13037551542 status=NEW
+2026-04-16 00:14:19 | INFO     | bot.orders                   | -            | ORDER_TYPE:TWAP | Chunk 4/5 | symbol=BTCUSDT qty=0.01
+2026-04-16 00:14:19 | DEBUG    | bot.client                   | 793c7c77     | → POST /fapi/v1/order | params={'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': 0.01, 'timestamp': 1776278659814, 'recvWindow': 5000, 'signature': '<REDACTED>'}
+2026-04-16 00:14:20 | DEBUG    | urllib3.connectionpool       | 793c7c77     | https://testnet.binancefuture.com:443 "POST /fapi/v1/order HTTP/1.1" 200 None
+2026-04-16 00:14:20 | INFO     | bot.orders                   | -            | ORDER_TYPE:TWAP | Chunk 4/5 placed | orderId=13037551985 status=NEW
+2026-04-16 00:14:30 | INFO     | bot.orders                   | -            | ORDER_TYPE:TWAP | Chunk 5/5 | symbol=BTCUSDT qty=0.01
+2026-04-16 00:14:30 | DEBUG    | bot.client                   | 43c4bc0b     | → POST /fapi/v1/order | params={'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': 0.01, 'timestamp': 1776278670573, 'recvWindow': 5000, 'signature': '<REDACTED>'}
+2026-04-16 00:14:31 | DEBUG    | urllib3.connectionpool       | 43c4bc0b     | https://testnet.binancefuture.com:443 "POST /fapi/v1/order HTTP/1.1" 200 None
+2026-04-16 00:14:31 | INFO     | bot.orders                   | -            | ORDER_TYPE:TWAP | Chunk 5/5 placed | orderId=13037554011 status=NEW
+2026-04-16 00:14:31 | INFO     | bot.orders                   | -            | ORDER_TYPE:TWAP | TWAP completed | symbol=BTCUSDT total_chunks=5
+2026-04-16 00:14:31 | DEBUG    | __main__                     | -            | Trading bot exiting.
+2026-04-16 00:14:48 | DEBUG    | __main__                     | -            | Trading bot starting | python=3.14.4 | argv=['order', '--symbol', 'BTCUSDT', '--side', 'BUY', '--type', 'MARKET', '--quantity', '0.001', '--dry-run']
+2026-04-16 00:14:48 | DEBUG    | __main__                     | -            | Command=order | args={'command': 'order', 'symbol': 'BTCUSDT', 'side': 'BUY', 'order_type': 'MARKET', 'quantity': 0.001, 'price': None, 'time_in_force': 'GTC', 'interval': None, 'chunks': None, 'dry_run': True}
+2026-04-16 00:14:48 | INFO     | __main__                     | -            | Dry-run complete | params={'symbol': 'BTCUSDT', 'side': 'BUY', 'order_type': 'MARKET', 'quantity': 0.001, 'price': None, 'interval': None, 'chunks': None}
+2026-04-16 00:14:48 | DEBUG    | __main__                     | -            | Trading bot exiting.
+2026-04-16 00:15:07 | DEBUG    | __main__                     | -            | Trading bot starting | python=3.14.4 | argv=['balance']
+2026-04-16 00:15:07 | DEBUG    | __main__                     | -            | Command=balance | args={'command': 'balance'}
+2026-04-16 00:15:07 | DEBUG    | bot.client                   | 17a41c15     | → GET /fapi/v2/balance | params={'timestamp': 1776278707167, 'recvWindow': 5000, 'signature': '<REDACTED>'}
+2026-04-16 00:15:07 | DEBUG    | urllib3.connectionpool       | 17a41c15     | Starting new HTTPS connection (1): testnet.binancefuture.com:443
+2026-04-16 00:15:10 | DEBUG    | urllib3.connectionpool       | 17a41c15     | https://testnet.binancefuture.com:443 "GET /fapi/v2/balance?timestamp=1776278707167&recvWindow=5000&signature=a703907def737e3d32820222dc0804f3a1bc3ae9ae3561e39a56809bc34079c6 HTTP/1.1" 200 None
+2026-04-16 00:15:10 | DEBUG    | __main__                     | -            | Trading bot exiting.
+2026-04-16 00:15:43 | DEBUG    | __main__                     | -            | Trading bot starting | python=3.14.4 | argv=['orders']
+2026-04-16 00:15:43 | DEBUG    | __main__                     | -            | Command=orders | args={'command': 'orders', 'symbol': None}
+2026-04-16 00:15:43 | DEBUG    | bot.client                   | b9196d51     | → GET /fapi/v1/openOrders | params={'timestamp': 1776278743719, 'recvWindow': 5000, 'signature': '<REDACTED>'}
+2026-04-16 00:15:43 | DEBUG    | urllib3.connectionpool       | b9196d51     | Starting new HTTPS connection (1): testnet.binancefuture.com:443
+2026-04-16 00:15:45 | DEBUG    | urllib3.connectionpool       | b9196d51     | https://testnet.binancefuture.com:443 "GET /fapi/v1/openOrders?timestamp=1776278743719&recvWindow=5000&signature=caafc556ff788455628028dcf01ebed0546e0c69a03cd7b30542dda636d573c4 HTTP/1.1" 200 None
+2026-04-16 00:15:45 | DEBUG    | __main__                     | -            | Trading bot exiting.
+2026-04-16 00:17:18 | DEBUG    | __main__                     | -            | Trading bot starting | python=3.14.4 | argv=['order', '--symbol', 'BTCUSDT', '--side', 'BUY', '--type', 'MARKET', '--quantity', '0.001']
+2026-04-16 00:17:18 | DEBUG    | __main__                     | -            | Command=order | args={'command': 'order', 'symbol': 'BTCUSDT', 'side': 'BUY', 'order_type': 'MARKET', 'quantity': 0.001, 'price': None, 'time_in_force': 'GTC', 'interval': None, 'chunks': None, 'dry_run': False}
+2026-04-16 00:17:18 | DEBUG    | bot.client                   | be4b867a     | → GET /fapi/v1/time | params={}
+2026-04-16 00:17:18 | DEBUG    | urllib3.connectionpool       | be4b867a     | Starting new HTTPS connection (1): testnet.binancefuture.com:443
+2026-04-16 00:17:20 | DEBUG    | urllib3.connectionpool       | be4b867a     | https://testnet.binancefuture.com:443 "GET /fapi/v1/time HTTP/1.1" 200 28
+2026-04-16 00:17:20 | INFO     | bot.orders                   | -            | ORDER_TYPE:MARKET | Placing MARKET order | symbol=BTCUSDT side=BUY qty=0.001
+2026-04-16 00:17:20 | DEBUG    | bot.client                   | 71159d46     | → POST /fapi/v1/order | params={'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': 0.001, 'timestamp': 1776278840861, 'recvWindow': 5000, 'signature': '<REDACTED>'}
+2026-04-16 00:17:21 | DEBUG    | urllib3.connectionpool       | 71159d46     | https://testnet.binancefuture.com:443 "POST /fapi/v1/order HTTP/1.1" 200 None
+2026-04-16 00:17:21 | INFO     | bot.orders                   | -            | ORDER_TYPE:MARKET | MARKET order placed | orderId=13037569460 status=NEW
+2026-04-16 00:17:21 | DEBUG    | __main__                     | -            | Trading bot exiting.
+2026-04-16 00:17:59 | DEBUG    | __main__                     | -            | Trading bot starting | python=3.14.4 | argv=['order', '--symbol', 'BTCUSDT', '--side', 'BUY', '--type', 'LIMIT', '--quantity', '0.01', '--price', '60000']
+2026-04-16 00:17:59 | DEBUG    | __main__                     | -            | Command=order | args={'command': 'order', 'symbol': 'BTCUSDT', 'side': 'BUY', 'order_type': 'LIMIT', 'quantity': 0.01, 'price': 60000.0, 'time_in_force': 'GTC', 'interval': None, 'chunks': None, 'dry_run': False}
+2026-04-16 00:17:59 | DEBUG    | bot.client                   | 474a5147     | → GET /fapi/v1/time | params={}
+2026-04-16 00:17:59 | DEBUG    | urllib3.connectionpool       | 474a5147     | Starting new HTTPS connection (1): testnet.binancefuture.com:443
+2026-04-16 00:18:01 | DEBUG    | urllib3.connectionpool       | 474a5147     | https://testnet.binancefuture.com:443 "GET /fapi/v1/time HTTP/1.1" 200 28
+2026-04-16 00:18:01 | INFO     | bot.orders                   | -            | ORDER_TYPE:LIMIT | Placing LIMIT order | symbol=BTCUSDT side=BUY qty=0.01 price=60000.0 tif=GTC
+2026-04-16 00:18:01 | DEBUG    | bot.client                   | 17ebab61     | → POST /fapi/v1/order | params={'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'LIMIT', 'quantity': 0.01, 'price': 60000.0, 'timeInForce': 'GTC', 'timestamp': 1776278881016, 'recvWindow': 5000, 'signature': '<REDACTED>'}
+2026-04-16 00:18:01 | DEBUG    | urllib3.connectionpool       | 17ebab61     | https://testnet.binancefuture.com:443 "POST /fapi/v1/order HTTP/1.1" 200 None
+2026-04-16 00:18:01 | INFO     | bot.orders                   | -            | ORDER_TYPE:LIMIT | LIMIT order placed | orderId=13037570285 status=NEW
+2026-04-16 00:18:01 | DEBUG    | __main__                     | -            | Trading bot exiting.

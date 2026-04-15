@@ -1,0 +1,26 @@
+2026-04-15 23:39:16 | INFO     | bot.orders                   | -            | ORDER_TYPE:LIMIT | Placing LIMIT order | symbol=BTCUSDT side=BUY qty=0.01 price=50000.0 tif=GTC
+2026-04-15 23:39:16 | INFO     | bot.orders                   | -            | ORDER_TYPE:LIMIT | LIMIT order placed | orderId=13037503164 status=NEW
+2026-04-15 23:39:28 | INFO     | bot.orders                   | -            | ORDER_TYPE:TWAP | Starting TWAP | symbol=BTCUSDT side=BUY total_qty=0.03 chunks=3 interval=3s sub_type=MARKET
+2026-04-15 23:39:28 | INFO     | bot.orders                   | -            | ORDER_TYPE:TWAP | Chunk 1/3 | symbol=BTCUSDT qty=0.01
+2026-04-15 23:39:29 | INFO     | bot.orders                   | -            | ORDER_TYPE:TWAP | Chunk 1/3 placed | orderId=13037504139 status=NEW
+2026-04-15 23:39:32 | INFO     | bot.orders                   | -            | ORDER_TYPE:TWAP | Chunk 2/3 | symbol=BTCUSDT qty=0.01
+2026-04-15 23:39:33 | INFO     | bot.orders                   | -            | ORDER_TYPE:TWAP | Chunk 2/3 placed | orderId=13037504463 status=NEW
+2026-04-15 23:39:36 | INFO     | bot.orders                   | -            | ORDER_TYPE:TWAP | Chunk 3/3 | symbol=BTCUSDT qty=0.01
+2026-04-15 23:39:37 | INFO     | bot.orders                   | -            | ORDER_TYPE:TWAP | Chunk 3/3 placed | orderId=13037504819 status=NEW
+2026-04-15 23:39:37 | INFO     | bot.orders                   | -            | ORDER_TYPE:TWAP | TWAP completed | symbol=BTCUSDT total_chunks=3
+2026-04-16 00:13:34 | INFO     | bot.orders                   | -            | ORDER_TYPE:LIMIT | Placing LIMIT order | symbol=BTCUSDT side=BUY qty=0.01 price=60000.0 tif=GTC
+2026-04-16 00:13:35 | INFO     | bot.orders                   | -            | ORDER_TYPE:LIMIT | LIMIT order placed | orderId=13037550058 status=NEW
+2026-04-16 00:13:47 | INFO     | bot.orders                   | -            | ORDER_TYPE:TWAP | Starting TWAP | symbol=BTCUSDT side=BUY total_qty=0.05 chunks=5 interval=10s sub_type=MARKET
+2026-04-16 00:13:47 | INFO     | bot.orders                   | -            | ORDER_TYPE:TWAP | Chunk 1/5 | symbol=BTCUSDT qty=0.01
+2026-04-16 00:13:48 | INFO     | bot.orders                   | -            | ORDER_TYPE:TWAP | Chunk 1/5 placed | orderId=13037550831 status=NEW
+2026-04-16 00:13:58 | INFO     | bot.orders                   | -            | ORDER_TYPE:TWAP | Chunk 2/5 | symbol=BTCUSDT qty=0.01
+2026-04-16 00:13:59 | INFO     | bot.orders                   | -            | ORDER_TYPE:TWAP | Chunk 2/5 placed | orderId=13037551072 status=NEW
+2026-04-16 00:14:09 | INFO     | bot.orders                   | -            | ORDER_TYPE:TWAP | Chunk 3/5 | symbol=BTCUSDT qty=0.01
+2026-04-16 00:14:09 | INFO     | bot.orders                   | -            | ORDER_TYPE:TWAP | Chunk 3/5 placed | orderId=13037551542 status=NEW
+2026-04-16 00:14:19 | INFO     | bot.orders                   | -            | ORDER_TYPE:TWAP | Chunk 4/5 | symbol=BTCUSDT qty=0.01
+2026-04-16 00:14:20 | INFO     | bot.orders                   | -            | ORDER_TYPE:TWAP | Chunk 4/5 placed | orderId=13037551985 status=NEW
+2026-04-16 00:14:30 | INFO     | bot.orders                   | -            | ORDER_TYPE:TWAP | Chunk 5/5 | symbol=BTCUSDT qty=0.01
+2026-04-16 00:14:31 | INFO     | bot.orders                   | -            | ORDER_TYPE:TWAP | Chunk 5/5 placed | orderId=13037554011 status=NEW
+2026-04-16 00:14:31 | INFO     | bot.orders                   | -            | ORDER_TYPE:TWAP | TWAP completed | symbol=BTCUSDT total_chunks=5
+2026-04-16 00:18:01 | INFO     | bot.orders                   | -            | ORDER_TYPE:LIMIT | Placing LIMIT order | symbol=BTCUSDT side=BUY qty=0.01 price=60000.0 tif=GTC
+2026-04-16 00:18:01 | INFO     | bot.orders                   | -            | ORDER_TYPE:LIMIT | LIMIT order placed | orderId=13037570285 status=NEW

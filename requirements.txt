@@ -1,0 +1,9 @@
+# ── Core HTTP client ──────────────────────────────────────────────────────────
+requests>=2.31.0
+urllib3>=2.0.0          # Retry adapter used by requests
+
+# ── Environment / secrets loading ─────────────────────────────────────────────
+python-dotenv>=1.0.0
+
+# ── Optional: python-binance (not used in this implementation but easy swap-in)
+# python-binance>=1.0.17
