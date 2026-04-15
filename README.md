@@ -1,4 +1,4 @@
-# Binance Futures Testnet Trading Bot v3.0
+# Binance Futures Testnet Trading Bot
 
 A **production-quality Python 3 CLI trading bot** for Binance USDT-M Futures Testnet.  
 Supports **MARKET**, **LIMIT**, and **TWAP** orders with per-type log routing, account balance checks, and open order listing — all via the Binance REST API with HMAC-SHA256 signing.
